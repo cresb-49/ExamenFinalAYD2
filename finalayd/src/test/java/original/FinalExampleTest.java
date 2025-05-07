@@ -42,21 +42,47 @@ public class FinalExampleTest {
 
     @Test
     public void createUserWithValidInformation(){
-        //when(finalExample.createUser(NAME, EMAIL, PHONE, ADDRESS, CITY, ZIP)).thenReturn("User created: " + NAME);
-        //String result = finalExample.createUser(NAME, EMAIL, PHONE, ADDRESS, CITY, ZIP);
-        //assertNotNull(result);
-        //assertEquals(result, "User created: "+NAME);
+        when(finalExample.createUser(NAME, EMAIL, PHONE, ADDRESS, CITY, ZIP)).thenReturn("User created: " + NAME);
+        String result = finalExample.createUser(NAME, EMAIL, PHONE, ADDRESS, CITY, ZIP);
+        assertNotNull(result);
+        assertEquals(result, "User created: "+NAME);
     }
 
 
     @Test
     public void createUserWithNoValidName(){
-        //when(finalExample.createUser(NAME_FAIL, EMAIL, PHONE, ADDRESS, CITY, ZIP)).thenReturn("Name cannot be empty");
+        when(finalExample.createUser(NAME_FAIL, EMAIL, PHONE, ADDRESS, CITY, ZIP)).thenReturn("Name cannot be empty");
+        String result = finalExample.createUser(NAME_FAIL, EMAIL, PHONE, ADDRESS, CITY, ZIP);
+        assertNotNull(result);
+        assertEquals(result,"Name cannot be empty");
     }
 
     @Test
     public void createUserWithInvalidEmail(){
-        //when(finalExample.createUser(NAME, EMAIL_FAIL, PHONE, ADDRESS, CITY, ZIP)).thenReturn("Invalid email");
+        when(finalExample.createUser(NAME, EMAIL_FAIL, PHONE, ADDRESS, CITY, ZIP)).thenReturn("Invalid email");
+        String result = finalExample.createUser(NAME, EMAIL, PHONE, ADDRESS, CITY, ZIP);
+        assertNotNull(result);
+        assertEquals(result, "Invalid email");
+    }
+
+    @Test
+    public void calculateAreaOfCircle(){
+
+    }
+
+    @Test
+    public void calculateAreaOfRectangle(){
+
+    }
+
+    @Test
+    public void calculateAreaOfTriangle(){
+
+    }
+
+    @Test
+    public void calculateAreaOfShapeWithNotFomulaShape(){
+        
     }
 
 }
