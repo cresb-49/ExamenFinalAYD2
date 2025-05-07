@@ -67,7 +67,10 @@ public class FinalExampleTest {
 
     @Test
     public void calculateAreaOfCircle(){
-
+        when(finalExample.calculateArea("circle", 1)).thenReturn(3.141592653589793);
+        double result = finalExample.calculateArea("circle", 1);
+        assertNotNull(result);
+        assertEquals(result, 3.141592653589793);
     }
 
     @Test
@@ -82,7 +85,7 @@ public class FinalExampleTest {
 
     @Test
     public void calculateAreaOfShapeWithNotFomulaShape(){
-        
+
     }
 
 }

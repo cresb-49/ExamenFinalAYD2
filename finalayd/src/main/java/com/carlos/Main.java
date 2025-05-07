@@ -15,5 +15,8 @@ public class Main {
         double result2 = FinalExample.calculateArea("rectangle", 2,2);
         System.out.println(result2);
 
+        double result3 = FinalExample.calculateArea("triangle", 2,2);
+        System.out.println(result3);
+
     }
 }
